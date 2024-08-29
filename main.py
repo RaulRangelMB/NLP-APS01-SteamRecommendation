@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
-import json
 
 def get_result(query):
 
@@ -19,7 +18,7 @@ def get_result(query):
 
     sorted_indices = np.argsort(relevance_scores)[::-1]
 
-    num_results = 15
+    num_results = 10
     relevant_indexes = sorted_indices[:num_results]
     results = []
     for index in relevant_indexes:
@@ -28,17 +27,18 @@ def get_result(query):
         full_description = df.iloc[index]["description"]
         # short_description = ' '.join(full_description.split()[:500])  # Limit to the first 500 words
         relevance = relevance_scores[index]
-        
-        results.append({
-            "id": str(game_id),
-            "game": game_name,
-            "description": full_description,
-            "relevance": str(relevance)
-        })
+
+        if relevance > 0.3:
+            results.append({
+                "id": str(game_id),
+                "game": game_name,
+                "description": full_description,
+                "relevance": str(relevance)
+            })
 
     output = {
         "results": results,
-        "message": "OK"
+        "message": "OK" if results else "Something went wrong or no relevant result were found"
     }
 
     return output

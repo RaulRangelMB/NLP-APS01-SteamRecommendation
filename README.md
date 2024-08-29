@@ -15,7 +15,23 @@ Usa um dabatase de jogos da steam, obtida pelo scrapper https://github.com/Fronk
 
 ## Uso
 
-Como rodar localmente:
+Como rodar localmente (guia para Windows):
 - Clone o repositório
+- Entre na pasta do repositório
+- Crie uma env `python venv env`
+- Ative a env `env/Scripts/activate`
+- Instale as bibliotecas `python -m pip install -r requirements.txt`
 - Abra um terminal e rode `python app.py`
-- Entre no link que aparece no terminal
+- Entre no link que aparece no terminal e divirta-se!
+
+## Para entrega: 
+
+Test that yields 10 results: http://127.0.0.1:7591/query?query=open-world
+http://10.103.0.19:port/query?query=myquery
+
+Test that yields less than 10 results: http://127.0.0.1:7591/query?query=rocks
+http://10.103.0.19:port/query?query=myquery
+
+Test that yields something non-obvious: http://127.0.0.1:7591/query?query=not-bloody
+
+O resultado da query 'not bloody' encontra vários jogos muito sangrentos! Isso ocorre pois o modelo não entende o que a query está dizendo, apenas busca as palavras na query sem contexto.
