@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return "<p>Leia o README para entender como encontrar o jogo para você!</p>"
 
 @app.route("/query")
 def query():
@@ -20,4 +20,4 @@ def query():
     return jsonify(result_json)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port="7591", debug=True)
