@@ -20,4 +20,4 @@ def query():
     return jsonify(result_json)
 
 if __name__ == "__main__":
-    app.run(port="7591", debug=True)
+    app.run(host="0.0.0.0", port=7591, debug=True)
