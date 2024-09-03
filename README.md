@@ -21,18 +21,17 @@ Como rodar localmente (guia para Windows):
 - Crie uma env `python venv env`
 - Ative a env `env/Scripts/activate`
 - Instale as bibliotecas `python -m pip install -r requirements.txt`
-- Abra um terminal e rode `python app.py`
+- Abra um terminal no repositório e rode `python app.py`
 - Entre no link que aparece no terminal e divirta-se!
 
 ## Para entrega: 
 
-Test that yields 10 results: http://127.0.0.1:7591/query?query=open-world-game-pirate
-http://10.103.0.19:port/query?query=myquery
+Test that yields 10 results: http://10.103.0.28:7591/query?query=open-world-pirate-game
 
-Test that yields less than 10 results: http://127.0.0.1:7591/query?query=principle
-http://10.103.0.19:port/query?query=myquery
 
-Test that yields something non-obvious: http://127.0.0.1:7591/query?query=not-bloody
-http://10.103.0.19:port/query?query=myquery
+Test that yields less than 10 results: http://10.103.0.28:7591/query?query=principle
+
+
+Test that yields something non-obvious: http://10.103.0.28:7591/query?query=not-bloody
 
 O resultado da query 'not bloody' encontra vários jogos muito sangrentos! Isso ocorre pois o modelo não entende o que a query está dizendo, apenas busca as palavras na query sem contexto.
