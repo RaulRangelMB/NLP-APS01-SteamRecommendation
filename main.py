@@ -28,7 +28,7 @@ def get_result(query):
         # short_description = ' '.join(full_description.split()[:500])  # Limit to the first 500 words
         relevance = relevance_scores[index]
 
-        if relevance > 0.3:
+        if relevance > 0.25:
             results.append({
                 "id": str(game_id),
                 "game": game_name,

@@ -5,7 +5,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<p>Leia o README para entender como encontrar o jogo para você!</p>"
+    return """<p>Leia o README para entender como encontrar o jogo para você!</p>
+            <a href="https://github.com/RaulRangelMB/NLP-APS01-SteamRecommendation" target="_blank">Repositorio</a>"""
 
 @app.route("/query")
 def query():

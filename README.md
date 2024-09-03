@@ -26,12 +26,13 @@ Como rodar localmente (guia para Windows):
 
 ## Para entrega: 
 
-Test that yields 10 results: http://127.0.0.1:7591/query?query=open-world
+Test that yields 10 results: http://127.0.0.1:7591/query?query=open-world-game-pirate
 http://10.103.0.19:port/query?query=myquery
 
-Test that yields less than 10 results: http://127.0.0.1:7591/query?query=rocks
+Test that yields less than 10 results: http://127.0.0.1:7591/query?query=principle
 http://10.103.0.19:port/query?query=myquery
 
 Test that yields something non-obvious: http://127.0.0.1:7591/query?query=not-bloody
+http://10.103.0.19:port/query?query=myquery
 
 O resultado da query 'not bloody' encontra vários jogos muito sangrentos! Isso ocorre pois o modelo não entende o que a query está dizendo, apenas busca as palavras na query sem contexto.
